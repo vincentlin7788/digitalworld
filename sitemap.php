@@ -1,16 +1,16 @@
 <?php
-header('Content-type: application/xml; charset="UTF-8"',true);
+header('Content-type: application/xml; charset="GB2312"',true);
 ?>
 <?php
-$website = "https://vincentlin7788.github.io/digitalworld/"; /* 将此http://www.grzz.com.cn改成你的域名 */ 
-$page_root = "/"; /*更改成你网站的目录地址*/
+$website = "https://vincentlin7788.github.io"; /* 将此http://www.grzz.com.cn改成你的域名 */ 
+$page_root = "/digitalworld/"; /*更改成你网站的目录地址*/
 /* changefreq可自行设置 */
 $changefreq = "weekly"; //"always", "hourly", "daily", "weekly", "monthly", "yearly" and "never".
 /* 修改时间 */
 $last_modification = date("Y-m-d\TH:i:s") . substr(date("O"),0,3) . ":" . substr(date("O"),3);
 
 /* 需要生成的目录 */
-$allow_dir[] = "web";
+$allow_dir[] = "main";
 
 /* 需要过滤的目录(不列在SiteMap里面) */
 $disallow_dir[] = "admin";
