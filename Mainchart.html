@@ -9,21 +9,6 @@
 
     <meta name="keywords" content="Google Pie Chart,Study Programm" />
 
-<!-- Google Analytics Content Experiment code -->
-<script>function utmx_section(){}function utmx(){}(function(){var
-k='126476026-1',d=document,l=d.location,c=d.cookie;
-if(l.search.indexOf('utm_expid='+k)>0)return;
-function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
-indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
-length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
-'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
-'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
-'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
-valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
-'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
-</script><script>utmx('url','A/B');</script>
-<!-- End of Google Analytics Content Experiment code -->
-
 
 <script>
 function getParameterByName(name, url) {
@@ -66,8 +51,6 @@ function getParameterByName(name, url) {
   ga('anotherTracker.send', 'pageview');
   
 </script>
-
-
 <script type="text/javascript" src="jquery-3.1.0.min.js"></script>	
 <script type="text/javascript" src="data.json"></script>
 <script type="text/javascript" src="Keywords.json"></script>
@@ -88,7 +71,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   
   
   <a href = "secondpage.html">This is to land to the second page</a>
-  
+  <a href = "http://www.np360.com.hk/en/about-np360/careers/?utm_source=google&utm_campaign=(not%20set)&utm_medium=organic">This is to testing utm</a>
   <br>
     <br>
 	  <br>
@@ -156,7 +139,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
 	
-	
+<form action="action_page.php" method="post">
+  First name:<br>
+  <input type="text" name="firstname" value="Mickey">
+  <br>
+  Last name:<br>
+  <input type="text" name="lastname" value="Mouse">
+  <br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+<p>If you click the "Submit" button, the form-data will be sent to a page called "action_page.php".</p>
 	
   </body>
 </html>
