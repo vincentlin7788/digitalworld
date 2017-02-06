@@ -42,7 +42,7 @@ function getParameterByName(name, url) {
     campaignMedium:getParameterByName('utm_medium'),
     
 });
-  ga('set', 'userId', '<?php echo $_POST["firstname"]; ?>'); // Set the user ID using signed-in user_id.
+  ga('set', 'userId', '<?php echo $_GET["firstname"]; ?>'); // Set the user ID using signed-in user_id.
   ga('send', 'pageview');
 
       ga('anotherTracker.set',{
@@ -57,8 +57,8 @@ function getParameterByName(name, url) {
   </head>
 <body>
 
-Welcome <?php echo $_POST["firstname"]; ?><br>
-Your Last Name address is: <?php echo $_POST["lastname"]; ?>
+Welcome <?php echo $_GET["firstname"]; ?><br>
+Your Last Name address is: <?php echo $_GET["lastname"]; ?>
 
 </body>
 </html>
