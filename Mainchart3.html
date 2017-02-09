@@ -149,13 +149,9 @@ Type your Email Address: <INPUT TYPE="text" NAME="Email">
 <script>
 
 
-window._load = window.load;
-window.load = function(){
-  window.loaded = true;
-  window._load();
-};
 
-if (window.loaded != undefined && window.loaded == true){
+
+
     var clientID1 = function() {
 	try {
     var trackers = ga.getAll();
@@ -171,7 +167,7 @@ if (window.loaded != undefined && window.loaded == true){
 	ga('set','dimension8', clientID1);
 	ga('send', 'pageview');
 };
-}
+
 
 
 	
