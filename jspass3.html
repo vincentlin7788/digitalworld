@@ -87,7 +87,7 @@ document.joe.burns.value = locate;
 var text = document.joe.burns.value;
 
 
-document.write("Welcome " +delineate(text1) + "And Your Email Address is " +delineate2(text2));
+document.write("Welcome " +delineate(text) + "And Your Email Address is " +delineate2(text2));
 
 </SCRIPT> 
 <script>
@@ -103,7 +103,7 @@ window.addEventListener("load", function () {
     var trackers = ga.getAll();
     var i, len;
     for (i = 0, len = trackers.length; i < len; i += 1) {
-      if (trackers[i].get('trackingId') === {{GA Tracking Code}}) {
+      if (trackers[i].get('trackingId') === 'UA-81452102-2') {
         return trackers[i].get('clientId');
       }
     }
