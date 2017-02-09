@@ -47,7 +47,7 @@ function getParameterByName(name, url) {
   ga('set','userId', text1);
   ga('set','dimension6', text1);  // Set the user ID using signed-in user_id.
   ga('set','dimension7', text2);  // Set the user ID using signed-in Email Address.
-  ga('send', 'pageview');
+  //ga('send', 'pageview');
 
       ga('anotherTracker.set',{
     campaignName:getParameterByName('utm_campaign'),
@@ -90,6 +90,37 @@ var text = document.joe.burns.value;
 document.write("Welcome " +delineate(text1) + "And Your Email Address is " +delineate2(text2));
 
 </SCRIPT> 
+<script>
 
+window.addEventListener("load", function () {
+    window.loaded = true;
+});
+
+(function listen () {
+    if (window.loaded) {
+        var clientID1 = function() {
+	try {
+    var trackers = ga.getAll();
+    var i, len;
+    for (i = 0, len = trackers.length; i < len; i += 1) {
+      if (trackers[i].get('trackingId') === {{GA Tracking Code}}) {
+        return trackers[i].get('clientId');
+      }
+    }
+  } catch(e) {}  
+	return 'false';
+	ga('set','dimension8', clientID1)
+	ga('send', 'pageview');
+	
+	
+	};
+    } else {
+        console.log("notLoaded");
+        window.setTimeout(listen, 50);
+    }
+})();
+
+
+</script>
 </body>
 </html>
