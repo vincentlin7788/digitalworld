@@ -148,13 +148,15 @@ Type your Email Address: <INPUT TYPE="text" NAME="Email">
 
 <script>
 
-window.addEventListener("load", function () {
-    window.loaded = true;
-});
 
-(function listen () {
-    if (window.loaded) {
-        var clientID1 = function() {
+window._load = window.load;
+window.load = function(){
+  window.loaded = true;
+  window._load();
+}
+
+if (window.loaded != undefined && window.loaded == true){
+    var clientID1 = function() {
 	try {
     var trackers = ga.getAll();
     var i, len;
@@ -165,16 +167,15 @@ window.addEventListener("load", function () {
     }
   } catch(e) {}  
 	return 'false';
-	ga('set','dimension8', clientID1)
+	
+	ga('set','dimension8', clientID1);
 	ga('send', 'pageview');
+};
+}
+
+
 	
-	
-	};
-    } else {
-        console.log("notLoaded");
-        window.setTimeout(listen, 50);
-    }
-})();
+
 
 
 </script>	
