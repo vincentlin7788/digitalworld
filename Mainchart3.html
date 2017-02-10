@@ -39,7 +39,7 @@ function getParameterByName(name, url) {
     campaignName:getParameterByName('utm_campaign'),
     campaignSource:getParameterByName('utm_source'),
     campaignMedium:getParameterByName('utm_medium'),
-    
+    campaignContent:getParameterByName('utm_content'),
 });
   //ga('send', 'pageview');
   
@@ -47,6 +47,7 @@ function getParameterByName(name, url) {
     campaignName:getParameterByName('utm_campaign'),
     campaignSource:getParameterByName('utm_source'),
     campaignMedium:getParameterByName('utm_medium'),
+	campaignContent:getParameterByName('utm_content'),
 });
   ga('anotherTracker.send', 'pageview');
   
