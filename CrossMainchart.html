@@ -21,21 +21,7 @@
   ga('send', 'pageview');
 
 </script>
-<script>
-function getLinkerParam() {
- 
- 
-  var trackers = ga.getAll()[0].get('clientId');
 
-  return trackers;
- 
-
-}
- 
-getLinkerParam();
-
-
-</script>
 
 <script type="text/javascript" src="jquery-3.1.0.min.js"></script>	
 
@@ -47,7 +33,27 @@ getLinkerParam();
 
   </head>
   <body>
+ <script>
   
+  document.addEventListener("DOMContentLoaded", function(event) {
+    function getLinkerParam() {
+ 
+ 
+  var trackers = ga.getAll()[0].get('clientId');
+
+  return trackers;
+ 
+
+}
+
+getLinkerParam();
+  });
+
+ 
+
+
+
+</script>
  
 <!-- 
  <iframe src="https://ssl.youfindonline.info/asia/jobs-in-china-for-foreigners.php" width="30%" height="1040" style="border: 0;"></iframe>
