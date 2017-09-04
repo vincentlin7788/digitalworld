@@ -36,14 +36,18 @@
  <script>
   
   document.addEventListener("DOMContentLoaded", function(event) {
-    function getLinkerParam() {
- 
- 
-  var trackers = ga.getAll()[0].get('clientId');
-
-  return trackers;
- 
-
+function getLinkerParam() {
+  try {
+    var trackers = ga.getAll();
+    var i, len;
+    for (i = 0, len = trackers.length; i < len; i += 1) {
+      if (trackers[i].get('trackingId') === {{GA Tracking Code}}) {
+        console.log("fetching clientId success");
+        return trackers[i].get('clientId');
+      }
+    }
+  } catch(e) {return console.log("Error fetching clientId");}  
+  
 }
 
 getLinkerParam();
