@@ -22,23 +22,14 @@
 
 </script>
 <script>
-function getLinkerParam(uaNumber) {
+function getLinkerParam() {
  
-  var _ga = window[window.GoogleAnalyticsObject];
-  var trackers = _ga.getAll();
-  var i;
  
-  for (i = 0; i < trackers.length; i++) {
-    
-    var _tracker = trackers[i];
-    if (!uaNumber || _tracker.get('trackingId') === uaNumber) {
+  var trackers = ga.getAll()[0].get('clientId');;
+
+  return _tracker.get('linkerParam');
  
-      return _tracker.get('linkerParam');
- 
-    }
- 
-  }
- 
+
 }
  
 getLinkerParam();
@@ -63,11 +54,11 @@ getLinkerParam();
  
  https://vincentlin7788.github.io/digitalworld/
  -->
- 
+ <!-- 
  <iframe id=iframe-holder width="30%" height="1040" style="border: 0;"></iframe>
- 
+  -->
  <script>
- var iframe = document.createElement('iframe');
+var iframe = document.createElement('iframe');
 var linkerParam = getLinkerParam();
 iframe.src = 'testinglocal/cross-hkue.html' + '?' + linkerParam;
 document.getElementById('iframe-holder').appendChild(iframe);
