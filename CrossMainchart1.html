@@ -37,7 +37,7 @@
  <script>
   
 
-
+window.onload = function loadContIcons() {
     var clientID3 = function() {
 	try {
     var trackers1 = ga.getAll();
@@ -55,13 +55,13 @@
 var linkerParam = clientID3();
 
 
-
 var iframe = document.createElement('iframe');
 <!-- var linkerParam = getLinkerParam(); -->
 iframe.src = 'testinglocal/cross-hkue.html' + '?' + linkerParam;
 document.getElementById('iframe-holder').appendChild(iframe);
 
- 
+};
+
 
 
 
