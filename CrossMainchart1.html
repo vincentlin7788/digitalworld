@@ -55,8 +55,9 @@ var linkerParam = clientID3();
 
 
 var iframe = document.createElement('iframe');
+var customParam = 'transfer_client_id=' + linkerParam;
 
-iframe.src = 'https://crosschart.updog.co/cross-hkue.html' + '?' + linkerParam;
+iframe.src = 'https://crosschart.updog.co/cross-hkue.html' + '?' + customParam;
 document.getElementById('iframe-holder').appendChild(iframe);
 
 };
