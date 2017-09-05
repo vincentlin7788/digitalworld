@@ -39,7 +39,9 @@ var url = new URL(document.location);
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-81452102-5', 'auto',{ 'clientId': clientId });
+  ga('create', 'UA-81452102-5', 'auto',{'allowLinker': true });
+  ga('require', 'linker');
+  ga('linker:autoLink', ['github.io','crosschart.updog.co']);
   ga('send', 'pageview');
 
 </script>
