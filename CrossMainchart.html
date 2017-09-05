@@ -36,22 +36,29 @@
  <script>
   
 
-function getLinkerParam() {
-  try {
-    var trackers = ga.getAll();
+
+    var clientID3 = function() {
+	try {
+    var trackers1 = ga.getAll();
     var i, len;
-    for (i = 0, len = trackers.length; i < len; i += 1) {
-      if (trackers[i].get('trackingId') === {{GA Tracking Code}}) {
-        console.log("fetching clientId success");
-        return trackers[i].get('clientId');
+    for (i = 0, len = trackers1.length; i < len; i += 1) {
+      if (trackers1[i].get('trackingId') === 'UA-81452102-5') {
+        return trackers1[i].get('clientId');
       }
     }
-  } catch(e) {return console.log("Error fetching clientId");}  
-  
-}
+  } catch(e) {}  
+	return 'false';
+	
 
-getLinkerParam();
+};
+var linkerParam = clientID3();
 
+
+
+var iframe = document.createElement('iframe');
+<!-- var linkerParam = getLinkerParam(); -->
+iframe.src = 'testinglocal/cross-hkue.html' + '?' + linkerParam;
+document.getElementById('iframe-holder').appendChild(iframe);
 
  
 
@@ -67,12 +74,7 @@ getLinkerParam();
  <!-- 
  <iframe id=iframe-holder width="30%" height="1040" style="border: 0;"></iframe>
   -->
- <script>
-var iframe = document.createElement('iframe');
-var linkerParam = getLinkerParam();
-iframe.src = 'testinglocal/cross-hkue.html' + '?' + linkerParam;
-document.getElementById('iframe-holder').appendChild(iframe);
-</script>
+
  <script>
   $(document).ready(function(){
   $('img').mouseup(function(){
