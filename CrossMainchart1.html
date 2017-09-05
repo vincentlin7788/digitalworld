@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  
 	<meta charset="utf-8" />
 	<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
     <title>Google Pie Chart Study Programm for Digital World</title>
@@ -26,7 +26,6 @@
 
 <script type="text/javascript" src="jquery-3.1.0.min.js"></script>	
 
-<script type="text/javascript" src="Keywords.json"></script>
 
 
 
@@ -97,31 +96,7 @@ pressTimer = window.setTimeout(function() {dataLayer.push({'event': 'longClick'}
 	  <br>
 	    <br>
 
-     <script type="text/javascript">
-      google.charts.load("current", {packages:["corechart"]});
-      google.charts.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Task', 'Hours per Day'],
-          ['Work',     11],
-          ['Eat',      2],
-          ['Commute',  2],
-          ['Watch TV', 2],
-          ['Sleep',    7]
-        ]);
-
-        var options = {
-          title: 'My Daily Activities',
-          is3D: true,
-          animation: {'startup': true,
-          'duration': 1000,
-          'easing': 'linear'},
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-        chart.draw(data, options);
-      }
-    </script>
+ 
 	
 	
 	<script>
@@ -166,36 +141,7 @@ Type your Email Address: <INPUT TYPE="text" NAME="Email">
 <p>If you click the "Submit" button, the form-data will be sent to a page called "jspass2.html".</p>
 
 
-<script>
 
-
-
-
-
-    var clientID1 = function() {
-	try {
-    var trackers = ga.getAll();
-    var i, len;
-    for (i = 0, len = trackers.length; i < len; i += 1) {
-      if (trackers[i].get('trackingId') === 'UA-81452102-2') {
-        return trackers[i].get('clientId');
-      }
-    }
-  } catch(e) {}  
-	return 'false';
-	
-
-};
-var clientID = clientID1();
-	ga('set','dimension8', clientID);
-	ga('send', 'pageview');
-
-
-	
-
-
-
-</script>
 
 <img src="picture1.gif" alt="color deck">	
 <!--
