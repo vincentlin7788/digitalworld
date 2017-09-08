@@ -37,7 +37,7 @@
 <iframe id="destination-frame" src="https://crosschart.updog.co/cross-hkue2.html" width="90%" height="1040" style="border: 0;"></iframe>
  <script>
 
-ga(function(tracker) {
+setInterval(ga(function(tracker) {
   // Gets the client ID of the default tracker.
   var clientId = tracker.get('clientId');
   console.log(clientId);
@@ -47,7 +47,7 @@ ga(function(tracker) {
 
   // Sends the client ID to the window inside the destination frame.
   frameWindow.postMessage(clientId, 'https://crosschart.updog.co/cross-hkue2.html');
-});
+}),6000);
 </script>
 
 
