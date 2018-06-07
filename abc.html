@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>change demo</title>
+
+  <script src="jquery-3.1.0.min.js"></script>
+  
+   <style>
+  div {
+    color: red;
+  }
+  .illustration {
+  width: 100%;
+}
+ .illustration1 img {
+  width: 100%;
+  display: block;
+} 
+  </style>
+</head>
+
+<body>
+<form action="screenshot_it.php">
+网站地址 (不带 http://):<input name="site" type="text" size="15" value="www."/><br/>
+大小: 
+<input name="x" type="text" value="800" size="3"/>px<br />
+<input name="y" type="text" value="1000" size="3"/>px<br />
+图片格式:
+<select name="format">
+<option value="PNG">PNG</option>
+<option value="JPEG">JPEG</option>
+</select> 
+<input type="submit" name="preview" value="生成截图"/></form>
+<div class='section content'>
+  <img class='illustration' src='images/illustration.svg' />
+</div>
+
+
+<div class='section content'>
+  <div class='illustration1'>
+    <img src='images/seminar.png' style='max-width: 500px'/>
+  </div>
+</div>
+</body>
