@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>change demo</title>
+
+  <script src="jquery-3.1.0.min.js"></script>
+  
+   <style>
+  div {
+    color: red;
+  }
+  .illustration {
+  width: 100%;
+}
+ .illustration1 img {
+  width: 100%;
+  display: block;
+} 
+  </style>
+</head>
+
+<body>
+<div id="floatframe">
+<iframe
+	
+    allow="microphone;"
+    width="350"
+    height="630"
+	align="right"
+	frameborder="10" hspace="10" vspace="10" scrolling="yes"
+    src="https://console.dialogflow.com/api-client/demo/embedded/c34ebeb7-cd26-4be0-b852-73f0b56b4731">
+</iframe>
+</div>
+<style type="text/css"> #floatframe {top:200px; width:350px; height:650px; z-index:100; padding-left: 1400px; position: -webkit-sticky; position: sticky; } </style>
+<script>
+var $window = $( window ); // 1. Window Object.
+//var $featuredMedia = $( "#featured-media" ); // 1. The Video Container.
+var $floatframe = $( "#floatframe" ); // 2. The Youtube Video.
+ 
+var player; // 3. Youtube player object.
+var top = $floatframe.offset().top; // 4. The video position from the top of the document;
+var offset = Math.floor( top + ( $floatframe.outerHeight() / 2 ) ); //5. offset.
+
+$window
+.on( "resize", function() {
+   top = $floatframe.offset().top;
+   offset = Math.floor( top + ( $floatframe.outerHeight() / 2 ) );
+} )
+ 
+.on( "scroll", function() {
+   $floatframe.toggleClass( "is-sticky",
+     $window.scrollTop() > offset && $floatframe.hasClass( "is-playing" )
+   );
+} );
+</script>
+<div id="scissors">
+    <p>This is <span class="paper">crazy</span></p>
+</div>
+<form action="screenshot_it.php">
+网站地址 (不带 http://):<input name="site" type="text" size="15" value="www."/><br/>
+大小: 
+<input name="x" type="text" value="800" size="3"/>px<br />
+<input name="y" type="text" value="1000" size="3"/>px<br />
+图片格式:
+<select name="format">
+<option value="PNG">PNG</option>
+<option value="JPEG">JPEG</option>
+</select> 
+<input type="submit" name="preview" value="生成截图"/></form>
+<div class='section content'>
+  <img class='illustration' src='images/illustration.svg' />
+</div>
+
+
+<div class='section content'>
+  <div class='illustration1'>
+    <img src='images/seminar.png' style='max-width: 500px'/>
+  </div>
+</div>
+</body>
