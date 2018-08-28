@@ -89,7 +89,25 @@
     content_type: 'product',
   });
 </script>
+<button onclick="myAddtoCartFunction()">Add to Cart</button>
+<script>
+function myAddtoCartFunction() {
 
+  fbq('track', 'AddToCart', {
+    content_ids: 'FB_product_1235',
+    content_type: 'product',
+    contents: [
+        {
+            id: 'FB_product_1235',
+            quantity: 2,
+            item_price: 311.2
+        }
+    ],
+  });
+  
+    console.log("AddToCart success");
+}
+</script>
 <!-- Step 1: Create the containing elements. -->
 
 <section id="auth-button"></section>
