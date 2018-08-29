@@ -96,11 +96,13 @@ function myAddtoCartFunction() {
   fbq('track', 'AddToCart', {
     content_ids: 'FB_product_1234',
     content_type: 'product',
+	value: 256.8,
+	currency: 'HKD',
     contents: [
         {
             id: 'FB_product_1234',
             quantity: 3,
-            item_price: 256.8
+            item_price: 85.6
         }
     ],
   });
@@ -113,11 +115,13 @@ function myAddtoCartFunction() {
   fbq('track', 'Purchase', {
     content_ids: 'FB_product_1234',
     content_type: 'product',
+	value: 171.2,
+	currency: 'HKD',
     contents: [
         {
             id: 'FB_product_1234',
             quantity: 2,
-            item_price: 171.2
+            item_price: 85.6
         }
     ],
   });
