@@ -112,6 +112,7 @@ function myAddtoCartFunction() {
 
 <button onclick="myPurchasingFunction()">Purchasing</button>
 <script>
+function myPurchasingFunction() {
   fbq('track', 'Purchase', {
     content_ids: 'FB_product_1234',
     content_type: 'product',
@@ -125,6 +126,8 @@ function myAddtoCartFunction() {
         }
     ],
   });
+  };
+  
 </script>
 
 

@@ -148,6 +148,7 @@ function myAddtoCartFunction() {
 
 <button onclick="myPurchasingFunction()">Purchasing</button>
 <script>
+function myPurchasingFunction() {
   fbq('track', 'Purchase', {
     content_ids: 'Sbag_product_5555',
     content_type: 'product',
@@ -161,6 +162,7 @@ function myAddtoCartFunction() {
         }
     ],
   });
+  };
 </script>
 
 <!-- Step 1: Create the containing elements. -->
