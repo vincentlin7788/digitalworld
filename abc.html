@@ -82,7 +82,14 @@ window.dataLayer = window.dataLayer || [];
 });
 */
 </script>
-
+<script>
+ window.dataLayer = window.dataLayer || [];
+ window.dataLayer.push({
+ 'event': 'ToPayment_by_CashOnly',
+ 'event': 'ToPayment_by_Cash_and_Point',
+ 'event': 'ToPayment_by _PointOnly'
+});
+</script>
 
 <div class='section content'>
   <div class='illustration1'>
